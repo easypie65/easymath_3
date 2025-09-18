@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼각비 문제은행</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>📐 삼각비 문제은행</h1>
+        <p>정답을 입력하고 확인 버튼을 누르세요. 오답 시 유사 문제가 제공됩니다.</p>
+        
+        <div class="problem-section" id="easy-problems">
+            <h2>하 (길이 구하기)</h2>
+            <div class="problem" id="problem1">
+                <p>1. 다음 직각삼각형에서 $x$의 길이를 구하시오. (그림: 빗변 10, 각도 30도)</p>
+                <p>$$ \sin(30^\circ) = \frac{x}{10} $$</p>
+                <label for="answer1">정답:</label>
+                <input type="text" id="answer1">
+                <button onclick="checkAnswer(1, 'easy')">확인</button>
+                <p class="result" id="result1"></p>
+            </div>
+        </div>
+        
+        <div class="problem-section" id="medium-problems">
+            <h2>중 (넓이 구하기)</h2>
+            <div class="problem" id="problem2">
+                <p>2. 다음 삼각형의 넓이를 구하시오. (그림: 두 변의 길이 10, 8, 끼인각 60도)</p>
+                <p>$$ \text{넓이} = \frac{1}{2} \times 10 \times 8 \times \sin(60^\circ) $$</p>
+                <label for="answer2">정답:</label>
+                <input type="text" id="answer2">
+                <button onclick="checkAnswer(2, 'medium')">확인</button>
+                <p class="result" id="result2"></p>
+            </div>
+        </div>
+        
+        <div class="problem-section" id="hard-problems">
+            <h2>상 (복합 문제)</h2>
+            <div class="problem" id="problem3">
+                <p>3. 다음 그림과 같이 변의 길이가 주어졌을 때, $\triangle ABC$의 넓이를 구하시오. (그림: 변 AB=10, BC=12, 각 B=45도)</p>
+                <p>$$ \text{높이} = 10 \sin(45^\circ) = 10 \times \frac{\sqrt{2}}{2} = 5\sqrt{2} $$</p>
+                <p>$$ \text{넓이} = \frac{1}{2} \times 12 \times 5\sqrt{2} $$</p>
+                <label for="answer3">정답:</label>
+                <input type="text" id="answer3">
+                <button onclick="checkAnswer(3, 'hard')">확인</button>
+                <p class="result" id="result3"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
